@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if coordinates %}
+        Your ZIP code - {{ coordinates.zip_code }}<br>
+        Longitude - {{ coordinates.latitude }}<br>
+        Latitude - {{ coordinates.longitude}}
+    {% else %}
+        {{ error }}
+    {% endif %}
+</body>
+</html>

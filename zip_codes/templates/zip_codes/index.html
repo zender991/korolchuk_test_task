@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="{% url 'zip_codes:get-coordinates' %}" method="POST">
+         {% csrf_token %}
+         <p> Enter your Zip code</p>
+         <input type="number" name="zip_code" min="1" value="1">
+         <button type="submit">Get coordinates</button>
+    </form>
+</body>
+</html>
