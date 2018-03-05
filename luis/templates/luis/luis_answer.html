@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LUIS intent</title>
+</head>
+<body>
+    {% if intent %}
+        <p>Intent Name - {{ intent.topScoringIntent.intent }}</p>
+    {% else%}
+        <p>{{ error }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>

@@ -15,7 +15,12 @@ Including another URLconf
 """
 
 from django.conf.urls import url, include
+from zip_codes.views import index
+
 
 urlpatterns = [
-    url(r'', include('zip_codes.urls')),
+    url(r'^$', index, name='index'),
+    url(r'^zip/', include('zip_codes.urls')),
+    url(r'^luis/', include('luis.urls'))
+
 ]

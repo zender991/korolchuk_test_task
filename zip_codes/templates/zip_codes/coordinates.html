@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Coordinates</title>
 </head>
 <body>
     {% if coordinates %}
-        Your ZIP code - {{ coordinates.zip_code }}<br>
-        Longitude - {{ coordinates.latitude }}<br>
-        Latitude - {{ coordinates.longitude}}
+        <p>Your ZIP code - {{ coordinates.zip_code }}</p>
+        <p>Longitude: {{ coordinates.latitude }}</p>
+        <p>Latitude: {{ coordinates.longitude}}</p>
     {% else %}
-        {{ error }}
+        <p>{{ error }}</p>
     {% endif %}
 </body>
 </html>

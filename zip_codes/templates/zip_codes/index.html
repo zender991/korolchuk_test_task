@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Test task</title>
 </head>
 <body>
 
     <form action="{% url 'zip_codes:get-coordinates' %}" method="POST">
          {% csrf_token %}
-         <p> Enter your Zip code</p>
+         <p> Enter your Zip code (f.e. 10013)</p>
          <input type="number" name="zip_code" min="1" value="1">
          <button type="submit">Get coordinates</button>
+    </form>
+    <hr>
+    <form action="{% url 'luis:get-luis-answer' %}" method="POST">
+         {% csrf_token %}
+         <p> Enter your query for LUIS</p>
+         <input type="text" name="luis_query">
+         <button type="submit">Get intent</button>
     </form>
 </body>
 </html>
