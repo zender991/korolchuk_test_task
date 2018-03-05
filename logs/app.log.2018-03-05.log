@@ -1,0 +1,8 @@
+2018-03-05 22:56:28,137 - INFO - Sent query to LUIS - hi
+2018-03-05 22:56:29,056 - INFO - Response from LUIS - Hello
+2018-03-05 22:56:44,168 - INFO - Sent query to LUIS - I want to by phone
+2018-03-05 22:56:45,078 - INFO - Response from LUIS - Buy
+2018-03-05 22:56:54,892 - INFO - Sent query to LUIS - test
+2018-03-05 22:56:55,800 - INFO - Response from LUIS - None
+2018-03-05 22:57:08,510 - INFO - Sent query to LUIS - How are you?
+2018-03-05 22:57:09,420 - INFO - Response from LUIS - Hello
