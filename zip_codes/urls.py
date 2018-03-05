@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from zip_codes.views import index, get_coordinates
+from zip_codes.views import get_coordinates
 
 
 app_name = 'zip_codes'

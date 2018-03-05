@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from luis.credentials import luis_api_key, luis_url
 import requests
 
 
 def get_luis_answer(request):
     headers = {
         # Request headers
-        'Ocp-Apim-Subscription-Key': 'b226f724821f4262a3617aa1b6723ca0',
+        'Ocp-Apim-Subscription-Key': luis_api_key,
     }
 
     params = {
@@ -19,7 +20,7 @@ def get_luis_answer(request):
     }
 
     try:
-        r = requests.get('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/69d4408b-8d1d-4a9f-b70b-02aa40163378', headers=headers, params=params)
+        r = requests.get(luis_url, headers=headers, params=params)
         context = {'intent': r.json()}
 
     except Exception as e:
